@@ -1,3 +1,4 @@
+// Função para ler um arquivo  txt
 const fs = require('fs');
 const readline = require('readline');
 
