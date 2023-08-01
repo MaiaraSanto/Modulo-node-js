@@ -1,4 +1,4 @@
-// Função para ler um arquivo  txt
+//Função para ler um arquivo txt
 const fs = require('fs');
 const readline = require('readline');
 
@@ -7,7 +7,7 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-// Função para verificar se uma string contém apenas números
+//Função para verificar se uma string contém apenas números
 const hasOnlyNumbers = (str) => /^\d+$/.test(str);
 
 // Função para calcular a soma dos números em uma linha
@@ -15,7 +15,24 @@ const sumNumbersInLine = (line) => {
   const numbers = line.match(/\d+/g);
   if (!numbers) return 0;
   return numbers.map(Number).reduce((sum, num) => sum + num, 0);
+
 };
+
+// Função para calcular a soma dos números por ele mesmo em um array
+const numbers = [5, 4, 10, 14];
+const doubledPositiveNumbers = numbers.reduce((accumulator, currentValue) => {
+  if (currentValue > 0) {
+    const doubled = currentValue * 2;
+    accumulator.push(doubled);
+  }
+  return accumulator;
+}, [])
+
+var totalSum = [5, 4, 10, 14].reduce(
+  (acumulator, valorAtual) =>
+    acumulator + valorAtual,
+  0
+);
 
 // Função para processar o arquivo e exibir o resumo
 const processFile = (filePath) => {
@@ -44,9 +61,11 @@ const processFile = (filePath) => {
     const executionTime = (end - start) / 1000; // Converter para segundos
 
     const summary = {
+      totalSum,
       sumOfNumbers,
       numLinesWithText,
-      executionTime
+      executionTime,
+      doubledPositiveNumbers
     };
 
     console.log(summary);
