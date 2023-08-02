@@ -28,7 +28,7 @@ const doubledPositiveNumbers = numbers.reduce((accumulator, currentValue) => {
   return accumulator;
 }, [])
 
-var totalSum = [5, 4, 10, 14].reduce(
+var totalSum = [...numbers].reduce(
   (acumulator, valorAtual) =>
     acumulator + valorAtual,
   0
