@@ -28,6 +28,7 @@ const doubledPositiveNumbers = numbers.reduce((accumulator, currentValue) => {
   return accumulator;
 }, [])
 
+// Função para somar os números contido em um arquivo txt
 var totalSum = [...numbers].reduce(
   (acumulator, valorAtual) =>
     acumulator + valorAtual,
