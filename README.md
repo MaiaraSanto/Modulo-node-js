@@ -3,11 +3,6 @@
 
 ***
 
-<img src="stackx.jpg" align="center" height="200em" width="100%"> 
-
-***
-
-
 - Crie uma apliação em NodeJS que faça o seguinte:
 
  - Peça o caminho de um arquivo txt do seu computador;
